@@ -5,7 +5,7 @@ async function main() {
   
   const [owner, signer1, signer2] = await ethers.getSigners();
 
-  // -> I have not deployed this code, I only write it down here
+  
   const TodolistToken = await hre.ethers.getContractFactory("TodoList");
   const todolistToken = await TodolistToken.deploy();
   await todolistToken.deployed();

@@ -6,6 +6,11 @@ require("dotenv").config();
 module.exports = {
   solidity: "0.8.9",
   networks: {
+    hardhat: {
+      forking: {
+        url: process.env.MAINNET_URL,
+      }
+    },
     rinkeby: {
       url: process.env.ALCHEMY_RINKEBY_API_KEY_URL,
       accounts: [process.env.PRIVATE_KEY],
